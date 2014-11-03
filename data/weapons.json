@@ -1,0 +1,17 @@
+{
+  "weapons" : [
+  {
+    "id" : 0,
+    "name" : "Rusty iron sword",
+    "desc" : "The sword is rusty",
+    "damage" : 20
+  },
+  {
+    "id" : 1,
+    "name" : "disgusting slime",
+    "desc" : "disgusting slime",
+    "damage" : 15
+  }
+  ]
+}
+

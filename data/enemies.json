@@ -1,0 +1,26 @@
+{
+  "enemies" : [
+  {
+    "id" : 0,
+    "name" : "Green ooze",
+    "desc" : "You see a disgusting green ooze, it pulsates grossly",
+    "health" : 100,
+    "str" : 14,
+    "def" : 6,
+    "weapon_id" : 1,
+    "exp" : 150,
+    "intro" : "wobbles towards your general direction"
+  },
+  {
+    "id" : 1,
+    "name" : "Skeleton",
+    "desc" : "A threatening looking skeleton stands before you. You can hear it's bones scrape together making you grit your teeth.",
+    "health" : 200,
+    "str" : 16,
+    "def" : 10,
+    "weapon_id" : 0,
+    "exp" : 250,
+    "intro" : "looks at you with it's hollow eyes"
+  }
+  ]
+}

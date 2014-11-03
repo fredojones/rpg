@@ -1,0 +1,9 @@
+{
+  "armor" : [
+  {
+    "name" : "Rusty armor",
+    "desc" : "This is damn rusty!",
+    "defense" : 10
+  }
+  ]
+}

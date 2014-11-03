@@ -1,0 +1,20 @@
+{
+  "levels" : [
+  {
+    "level" : 2,
+    "exp_needed" : 100
+  },
+  {
+    "level" : 3,
+    "exp_needed" : 200
+  },
+  {
+    "level" : 4,
+    "exp_needed" : 300
+  },
+  {
+    "level" : 5,
+    "exp_needed" : 400
+  }
+  ]
+}

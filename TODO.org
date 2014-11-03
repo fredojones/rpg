@@ -1,0 +1,22 @@
+* Tasks
+** TODO Create inventory system
+*** DONE Be able to add Item objects
+    CLOSED: [2014-05-03 Sat 22:43]
+  - Item subclass for all items in game?
+*** DONE Viewable by player
+    CLOSED: [2014-05-03 Sat 22:43]
+*** DONE Items equipable
+    CLOSED: [2014-05-03 Sat 22:43]
+*** DONE Be able to pick up items
+    CLOSED: [2014-05-13 Tue 20:13]
+** TODO Object scripting
+*** DONE Simple commands for objects
+    CLOSED: [2014-04-29 Tue 17:47]
+  - like damage or talk?
+  - think about stimuli
+**** DONE Make prop able to hurt player when examined
+     CLOSED: [2014-04-26 Sat 23:08]
+     
+** TODO Add spell system
+*** TODO Add simple spell commands
+  - think about subject

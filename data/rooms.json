@@ -1,0 +1,89 @@
+{
+  "rooms" : [
+  {
+    "id" : "0",
+    "desc" : "The starting room\n\nYou see a clock on the wall",
+    "exits" : [
+    {
+      "id" : "1",
+      "dir" : "n"
+    },
+    {
+      "id" : "2",
+      "dir" : "s"
+    }
+    ],
+    "props" : [
+    {
+      "name" : "Clock",
+      "desc" : "The clock on the wall reads the time",
+
+      "actions" : [
+      {
+        "stimuli" : "touch",
+        "action" : {
+          "type" : "damage",
+          "amount" : 40,
+          "subject" : "player"
+        }
+      },
+      {
+        "stimuli" : "touch",
+        "action" : {
+          "type" : "say",
+          "message" : "The clock says, 'Haha! Weren't expecting that were you!'"
+        }
+      }
+      ]
+    }
+    ]
+  },
+  {
+    "id" : "1",
+    "desc" : "Another room",
+    "exits" : [
+    {
+      "id" : "0",
+      "dir" : "s"
+    },
+    {
+      "id" : "3",
+      "dir" : "e"
+    }
+    ]
+  },
+  {
+    "id" : "2",
+    "desc" : "A third room",
+    "exits" : [
+    {
+      "id" : "0",
+      "dir" : "n"
+    }
+    ]
+  },
+  {
+    "id" : "3",
+    "desc" : "Battle room\n\nThere are swords hanging on the wall.",
+    "enemies" : ["0", "1"],
+    "exits" : [
+    {
+      "id" : "1",
+      "dir" : "w"
+    }
+    ],
+    "props" : [
+    {
+      "name" : "Swords",
+      "desc" : "There are some old rusty swords, they have seen their time in battle."
+    }
+    ],
+    "items" : [
+    {
+      "type" : "weapon",
+      "id" : 1
+    }
+    ]
+  }
+  ]
+}
