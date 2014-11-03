@@ -1,7 +1,7 @@
 import json
 
 class Weapon:
-  
+
   def __init__(self, name, desc, damage):
     self.name = name
     self.desc = desc
@@ -30,7 +30,7 @@ def parse_weapons(filepath):
       _damage = int(weapon['damage'])
 
     weapons.append(Weapon(_name, _desc, _damage))
-  
-  
+
+
   return weapons
 

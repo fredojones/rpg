@@ -12,7 +12,7 @@ class Player:
   level = 1
   exp = 0
 
-  # Contains dict of information about each level 
+  # Contains dict of information about each level
   levels = {}
 
   # Hold armor object
@@ -41,7 +41,7 @@ class Player:
 
   def add_exp(self, exp):
     self.exp += exp
-    
+
     if self.exp > self.levels[self.level + 1]:
       self.level += 1
       self.exp = 0
@@ -62,13 +62,13 @@ class Player:
     for level in raw['levels']:
       self.levels[int(level['level'])] = int(level['exp_needed'])
 
-  
+
   def add_inventory(self, item):
     self.inventory.append(item);
 
   def print_inventory(self):
     print("You are currently carrying: ")
-    
+
     for item in self.inventory:
       if item == self.armor or item == self.weapon:
         print(item.name + " (equipped)")

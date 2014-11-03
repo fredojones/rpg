@@ -18,16 +18,16 @@ class Room:
 
     if len(self.exits) > 0:
       exit_string = 'There are exits: '
-      
+
       for exit in self.exits:
         exit_string += exit['dir'] + " "
 
       print(exit_string + "\n")
-   
+
 
     if len(self.enemies) > 0:
       print ("There are enemies here:")
-    
+
       for enemy in self.enemies:
         print(enemy.name)
 
@@ -61,13 +61,13 @@ def parse_rooms(filepath, enemies, weapons, armor):
       # Create prop objects
       for prop in room['props']:
         _actions = []
-        
+
         if 'actions' in prop:
           for action in prop['actions']:
             _actions.append(Action(action['stimuli'], action['action']))
 
         _props.append(Prop(prop['name'], prop['desc'], _actions))
-    
+
     if 'items' in room:
       # Create item objects
       for item in room['items']:

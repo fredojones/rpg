@@ -1,4 +1,5 @@
 * Tasks
+** TODO Refactor code to be more pythonic!!!
 ** TODO Create inventory system
 *** DONE Be able to add Item objects
     CLOSED: [2014-05-03 Sat 22:43]

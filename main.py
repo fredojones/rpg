@@ -1,29 +1,8 @@
 #!/usr/local/bin/python3
 
-#                        ^    ^
-#                       / \  //\
-#         |\___/|      /   \//  .\
-#         /O  O  \__  /    //  | \ \
-#        /     /  \/_/    //   |  \  \
-#        @___@'    \/_   //    |   \   \ 
-#           |       \/_ //     |    \    \ 
-#           |        \///      |     \     \ 
-#          _|_ /   )  //       |      \     _\
-#         '/,_ _ _/  ( ; -.    |    _ _\.-~        .-~~~^-.
-#         ,-{        _      `-.|.-~-.           .~         `.
-#          '/\      /                 ~-. _ .-~      .-~^-.  \
-#             `.   {            }                   /      \  \
-#           .----~-.\        \-'                 .~         \  `. \^-.
-#          ///.----..>    c   \             _ -~             `.  ^-`   ^-_
-#            ///-._ _ _ _ _ _ _}^ - - - - ~                     ~--,   .-~
-
-
-
-# Standard modules
 import sys
 import random
 
-# Our modules
 from player import *
 import room
 import enemy
@@ -31,7 +10,6 @@ import battle
 import weapon
 import armor
 import action
-
 
 
 # This is where the player chooses their class (and thus, their starting stats).
@@ -56,10 +34,10 @@ def main():
 
   # Populate weapons list by parsing the weapon data file.
   weapons = weapon.parse_weapons('data/weapons.json')
-  
+
   # Populate armor
   armors = armor.parse_armor('data/armor.json')
-  
+
   # Populate enemies, passing in weapons (that they can wield)
   enemies = enemy.parse_enemies('data/enemies.json', weapons)
 
@@ -75,12 +53,12 @@ def main():
   # Set up player
   # Instantiate the player class, weapons[0] is the default weapon
   #p = Player(get_stats())
-  player = Player({'str': 14, 'dex': 10, 'def': 16}, weapons[0]) 
+  player = Player({'str': 14, 'dex': 10, 'def': 16}, weapons[0])
 
   player.load_levels('data/levels.json') # Load the players leveling
   #player.armor = armors[0] # Give the player the basic armor
   player.add_inventory(armors[0])
-  
+
   # Main game loop
   while True:
     # Here we parse the command by first splitting it by each space so
@@ -157,7 +135,7 @@ def main():
       if enemy_found == False:
         print("No enemy was found called " + "\"" + subject + "\"")
 
-    
+
     elif command[0].lower() == 'stats':
       player.print_stats()
 
@@ -188,7 +166,7 @@ def main():
     elif command[0].lower() == 'take':
       subject = " ".join(command[1:])
 
-      item_found = False  
+      item_found = False
       _item = None # Temp item for removing from list
       for item in rooms[room_id].items:
         if item.name.startswith(subject) and subject.isspace() == False:
@@ -204,7 +182,6 @@ def main():
 
       if item_found == False:
         print("No item found named " + subject)
-
 
     elif command[0].lower() == 'equipment':
       player.print_equipment()
